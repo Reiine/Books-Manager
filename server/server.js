@@ -6,7 +6,7 @@ const books = require("./models/books");
 const app = express();
 app.use(cors());
 app.use(express.json());
-const port = 3001 || process.env.PORT;
+const port = process.env.PORT ||3001;
 app.post('/add',async (req,res)=>{
     const {name,author,description} = req.body;
     try {
